@@ -1,58 +1,101 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Isolated Castle",
+    "Credits": "Framework Created by Adam Smith (amsmith@ucsc.edu), story developed by Benjamin Nguyen.",
+    "InitialLocation": "CastleBedroom",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "CastleBedroom": {
+            "Body": "You awake in what appears to be an medival bedroom, fit for a king.",
+            "bread" : false,
+            "gateKey" : false,
+            "requiresKey" : false,
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Leave through the open door",
+                    "Target": "CastleHallway"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "CastleHallway": {
+            "Body": "You enter a grand hall way, spacious enough to hold thousands.",
+            "bread" : false,
+            "gateKey" : false,
+            "requiresKey" : false,
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Go back to Bedroom",
+                    "Target": "CastleBedroom"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": " Check out the Balcony",
+                    "Target": "Balcony"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Enter the Great Hall",
+                    "Target": "GreatHall"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Look for food in the Dining Hall",
+                    "Target": "DiningHall"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Balcony": {
+            "Body": "You enter the balcony, and notice you are ontop of a mountain, only able to see the clouds and pigeons.",
+            "bread" : false,
+            "gateKey" : false,
+            "requiresKey" : false,
+            "Choices": [
+                {
+                    "Text": "Go back to Castle Hallway",
+                    "Target": "CastleHallway"
+                }
+            ]
+        },
+        "DiningHall": {
+            "Body": "You see hundreds of tables lined up with perfectly spaced plates, forks, and more, yet no food to be served other than some baskets of bread.",
+            "bread" : false,
+            "gateKey" : false,
+            "requiresKey" : false,
+            "Choices": [
+                {
+                    "Text": "Go back to the Castle Hallway",
+                    "Target": "CastleHallway"
+                },
+                {
+                    "Text": "Delve deeper into the Kitchen",
+                    "Target": "Kitchen"
+                }
+            ]
+        },
+        "GreatHall": {
+            "Body": "The main entrence hall into the castle, usually filled with people but devoid of anything particular except a locked door to the outside.",
+            "bread" : false,
+            "gateKey" : false,
+            "requiresKey" : false,
+            "Choices": [
+                {
+                    "Text": "Go back to the Castle Hallway",
+                    "Target": "CastleHallway"
+                }
+            ]
+        },
+        "Kitchen": {
+            "Body": "You enter the kitchen, where food is prepared yet see an empty kitchen.",
+            "bread" : false,
+            "gateKey" : false,
+            "requiresKey" : false,
+            "Choices": [
+                {
+                    "Text": "Go back into the dining hall",
+                    "Target": "DiningHall"
+                }
+            ]
+        },
+        "Gatehouse": {
+            "Body": "You escaped the isolated castle, yet you still feel lonely in contrast to life.",
+            "bread" : false,
+            "gateKey" : false,
+            "requiresKey" : true
         }
     }
 }
